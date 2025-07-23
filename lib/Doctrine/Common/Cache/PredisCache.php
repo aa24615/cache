@@ -62,7 +62,7 @@ class PredisCache extends CacheProvider
      */
     protected function doSave($id, $data, $lifeTime = 0)
     {
-        $data = serialize($data);
+        //$data = serialize($data);
         if ($lifeTime > 0) {
             $response = $this->client->setex($id, $lifeTime, $data);
         } else {
