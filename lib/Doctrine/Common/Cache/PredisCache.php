@@ -36,7 +36,7 @@ class PredisCache extends CacheProvider
             return false;
         }
 
-        return unserialize($result);
+        return ($result);
     }
 
     /**
